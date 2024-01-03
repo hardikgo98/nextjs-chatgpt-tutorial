@@ -22,7 +22,7 @@ The application uses the following components:
     
 3.  Create a `.env.local` file in the project root and add your OpenAI API key:
     ```
-    OPENAI_API_KEY=your_openai_api_key 
+    OPENAI_API_KEY=your_openai_api_key
     ```
 4.  Start the development server by running `npm run dev` or `yarn dev`.
     
