@@ -1,4 +1,4 @@
-import { useMessages } from 'utils/useMessages'
+import { useMessages } from "utils/useMessages"
 
 const MessagesList = () => {
   const { messages, isLoadingAnswer } = useMessages()
@@ -6,13 +6,13 @@ const MessagesList = () => {
   return (
     <div className="max-w-3xl mx-auto pt-8">
       {messages?.map((message, i) => {
-        const isUser = message.role === 'user'
-        if (message.role === 'system') return null
+        const isUser = message.role === "user"
+        if (message.role === "system") return null
         return (
           <div
             id={`message-${i}`}
-            className={`flex mb-4 fade-up ${isUser ? 'justify-end' : 'justify-start'} ${
-              i === 1 ? 'max-w-md' : ''
+            className={`flex mb-4 fade-up ${isUser ? "justify-end" : "justify-start"} ${
+              i === 1 ? "max-w-md" : ""
             }`}
             key={message.content}
           >
@@ -24,11 +24,11 @@ const MessagesList = () => {
               />
             )}
             <div
-              style={{ maxWidth: 'calc(100% - 45px)' }}
+              style={{ maxWidth: "calc(100% - 45px)" }}
               className={`group relative px-3 py-2 rounded-lg ${
                 isUser
-                  ? 'mr-2 bg-gradient-to-br from-primary-700 to-primary-600 text-white'
-                  : 'ml-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
+                  ? "mr-2 bg-gradient-to-br from-primary-700 to-primary-600 text-white"
+                  : "ml-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
               }`}
             >
               {message.content.trim()}
